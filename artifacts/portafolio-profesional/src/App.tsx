@@ -169,9 +169,21 @@ function Home() {
         <div className="projects-heading"><div><SectionLabel index="04">{t.projects.sectionLabel}</SectionLabel><h2>{t.projects.titleFirst}<br /><em>{t.projects.titleEmphasis}</em></h2></div><p>{projectIntro[0]}<br />{projectIntro[1]}</p></div>
         {profile.projects.length > 0 ? (
           <div className="project-list">
-            {profile.projects.map((project) => <article className={`project-card ${project.art}`} key={project.number}>
+            {profile.projects.map((project) => <article className={`project-card ${project.art}`} key={project.number} aria-labelledby={`project-${project.number}`}>
               <div className="project-visual"><span className="project-visual-number">{project.mark}</span><span className="project-visual-shape" /><span className="project-visual-caption">{t.projects.study} / {project.number}</span></div>
-              <div className="project-details"><div className="project-meta"><span>{project.type[language]}</span><span>{t.projects.project} {project.number}</span></div><h3>{project.title}</h3><p>{project.description[language]}</p><div className="project-tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><ExternalLink href={project.url} className="project-open" label={`${t.projects.openProjectLabel} ${project.title}`} pendingTitle={t.pendingLink}><span>{t.projects.openProject}</span><ArrowUpRight className="project-arrow" size={17} /></ExternalLink></div>
+              <div className="project-details"><div className="project-meta"><span>{project.type[language]}</span><span>{t.projects.project} {project.number}</span></div><h3 id={`project-${project.number}`}>{project.title}</h3><p>{project.description[language]}</p><div className="project-tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>{project.details && (
+                <details className="project-disclosure">
+                  <summary aria-describedby={`project-${project.number}`}><span className="details-closed">{t.projects.viewDetails}</span><span className="details-open">{t.projects.hideDetails}</span></summary>
+                  <div className="project-expanded">
+                    <h4>{t.projects.objective}</h4><p>{project.details.objective[language]}</p>
+                    <h4>{t.projects.activities}</h4><ul>{project.details.activities.map((activity) => <li key={activity.en}>{activity[language]}</li>)}</ul>
+                    <h4>{t.projects.results}</h4><p>{project.details.result[language]}</p>
+                    <h4>{t.projects.skills}</h4><ul>{project.details.skills.map((skill) => <li key={skill.en}>{skill[language]}</li>)}</ul>
+                    <h4>{t.projects.scope}</h4><p>{project.details.scope[language]}</p>
+                  </div>
+                </details>
+              )}
+              {project.url && (<ExternalLink href={project.url} className="project-open" label={`${t.projects.openProjectLabel} ${project.title}`} pendingTitle={t.pendingLink}><span>{t.projects.openProject}</span><ArrowUpRight className="project-arrow" size={17} /></ExternalLink>)}</div>
             </article>)}
           </div>
         ) : (
