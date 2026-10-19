@@ -23,7 +23,7 @@ Un portafolio web moderno, bilingüe (🇪🇸 / 🇬🇧) y responsivo que pres
 
 Este repositorio contiene el código de mi **portafolio profesional**, una single-page application construida con **React + TypeScript + Vite** y organizada como un **monorepo con pnpm workspaces**.
 
-El sitio es mi carta de presentación como futuro profesional en tecnología: cuenta quién soy, qué me interesa (especialmente la **ciberseguridad**), por dónde he pasado, qué he construido y cómo contactarme. Todo el contenido vive en un único archivo de datos tipado, lo que hace que actualizar el portafolio sea tan simple como editar texto, sin tocar los componentes.
+El sitio es mi carta de presentación como futuro profesional en tecnología: cuenta quién soy, qué me interesa (especialmente la **ciberseguridad**), por dónde he pasado, qué he construido y cómo contactarme.
 
 > *"Tecnología con un enfoque en ciberseguridad."*
 
@@ -42,6 +42,8 @@ El sitio es mi carta de presentación como futuro profesional en tecnología: cu
 - 🔍 **SEO y redes sociales** — metaetiquetas Open Graph y Twitter Card, `robots.txt` y `lang` definido.
 - 🎞️ **Animaciones suaves** con Framer Motion.
 - 🧩 **Biblioteca de componentes** basada en shadcn/ui + Radix UI lista para crecer.
+- ♿ **Mejoras de accesibilidad** — identificadores ARIA y controles de interacción mejorados para los listados de proyectos.
+- 📚 **Detalle por proyecto** — cada proyecto puede desplegar una sección con objetivo, actividades, resultados, competencias y alcance (UX: "Ver detalles").
 
 ---
 
@@ -67,6 +69,24 @@ Sistema web para la **trazabilidad de materias primas de cooperativas cafetalera
 `Python` · `Django REST Framework` · `SQL Server`
 
 🔗 [Ver repositorio](https://github.com/GaZeLa28/Pruebas-de-Calidad)
+
+---
+
+## 🆕 Proyectos técnicos recientes
+
+Además del proyecto destacado, he añadido varios trabajos técnicos y laboratorios que reflejan experiencia práctica en administración de sistemas, ciberseguridad y bases de datos. Cada uno incluye una vista de detalles con objetivo, actividades técnicas, resultados y competencias profesionales.
+
+- 02 — Linux System Administration & OS Deployment
+  - Descripción: Implementación, migración y recuperación de distribuciones Linux (Ubuntu, Parrot OS, Arch Linux). Creación de medios USB booteables y diagnóstico de hardware/arranque.
+  - Tags: Ubuntu, Parrot OS, Arch Linux, GRUB, BIOS/UEFI, Bootable USB
+
+- 03 — Ethical Hacking & Vulnerability Assessment — EternalBlue (MS17-010)
+  - Descripción: Proyecto académico de evaluación de vulnerabilidades en laboratorio virtual controlado centrado en EternalBlue (SMBv1). Análisis de exposición, documentación de mitigaciones y recomendaciones de hardening.
+  - Tags: Kali Linux, Metasploit, SMBv1, CVE-2017-0144, Virtual Lab
+
+- 04 — High Availability & MySQL Database Replication
+  - Descripción: Laboratorio de replicación MySQL (origen–réplica) en máquinas virtuales Ubuntu para validar sincronización y operaciones de alta disponibilidad básica.
+  - Tags: MySQL 8.0, Replication, VMware, Ubuntu, SQL
 
 ---
 
@@ -99,7 +119,7 @@ Sistema web para la **trazabilidad de materias primas de cooperativas cafetalera
 ### Herramientas
 - **pnpm workspaces** con catálogo de dependencias compartidas.
 - **Node.js 24** y **TypeScript** con configuración base compartida (`tsconfig.base.json`).
-- 🔐 **Defensa contra ataques a la cadena de suministro**: `minimumReleaseAge: 1440` en `pnpm-workspace.yaml` exige que cada paquete npm lleve al menos 1 día publicado antes de poder instalarse. Además, el `preinstall` obliga a usar pnpm.
+- 🔐 **Defensa contra ataques a la cadena de suministro**: `minimumReleaseAge: 1440` en `pnpm-workspace.yaml` exige que cada paquete npm lleve al menos 1 día publicado antes de poder instalarse.
 
 ---
 
