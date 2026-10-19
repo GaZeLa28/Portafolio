@@ -407,6 +407,26 @@ a:focus-visible,button:focus-visible { outline:2px solid var(--rust);outline-off
 .project-tags span {font:8px 'DM Mono',monospace;color:#a9bad0;border:1px solid var(--line);padding:6px 8px;}
 .project-open {margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:10px;color:var(--ink);font-size:11px;text-decoration:none;}
 .project-open.unavailable {text-decoration:none;}
+.project-card {align-items:start;}
+.project-details {min-width:0;}
+.project-meta {gap:16px;line-height:1.7;}
+.project-meta>span:last-child {flex-shrink:0;}
+.project-details h3 {overflow-wrap:anywhere;}
+.project-details>p {white-space:pre-line;}
+.project-disclosure {width:100%;margin-top:22px;border-top:1px solid var(--line);}
+.project-disclosure summary {padding:16px 0;cursor:pointer;color:var(--rust);font-size:12px;min-height:44px;}
+.project-disclosure summary:focus-visible {outline:2px solid var(--rust);outline-offset:4px;}
+.project-disclosure .details-open {display:none;}
+.project-disclosure[open] .details-open {display:inline;}
+.project-disclosure[open] .details-closed {display:none;}
+.project-expanded {padding-bottom:8px;}
+.project-expanded h4 {font-size:12px;color:var(--ink);margin:20px 0 8px;}
+.project-expanded p,.project-expanded ul {font-size:12px;line-height:1.8;color:var(--muted-strong);margin:0;overflow-wrap:anywhere;}
+.project-expanded ul {padding-left:18px;}
+.project-expanded li+li {margin-top:6px;}
+.project-art--four .project-visual {background:#172a42;}
+.project-art--four .project-visual:before {width:190px;height:150px;border-radius:24px;}
+.project-art--four .project-visual-shape {width:120px;height:110px;border-radius:50% / 18%;background:var(--accent-blue);box-shadow:0 14px 0 -4px #172a42,0 16px 0 -3px var(--accent-blue);}
 .projects-disclaimer {font-size:10px;line-height:1.6;color:var(--muted);margin:20px 0 0;}
 .projects-empty {display:flex;justify-content:space-between;align-items:center;gap:28px;padding:32px 36px;background:var(--surface-raised);border:1px solid var(--line);}
 .projects-empty p {font:500 18px/1.5 'Playfair Display',serif;color:var(--ink);max-width:520px;margin:0;}

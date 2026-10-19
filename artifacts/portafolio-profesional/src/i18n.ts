@@ -66,6 +66,14 @@ export const translations = {
       study: 'Estudio',
       project: 'Proyecto',
       openProject: 'Ver el proyecto',
+      viewDetails: "Ver detalles",
+      hideDetails: "Ocultar detalles",
+      objective: "Objetivo",
+      activities: "Actividades técnicas",
+      results: "Resultados",
+      skills: "Competencias profesionales",
+      scope: "Alcance",
+
       openProjectLabel: 'Ver',
       empty:
         'Pronto compartiré aquí una selección de proyectos personales. Mientras tanto, puedes visitar mi perfil de GitHub.',
@@ -159,6 +167,14 @@ export const translations = {
       study: 'Study',
       project: 'Project',
       openProject: 'View project',
+      viewDetails: "View details",
+      hideDetails: "Hide details",
+      objective: "Objective",
+      activities: "Technical activities",
+      results: "Results",
+      skills: "Professional skills",
+      scope: "Scope",
+
       openProjectLabel: 'View',
       empty:
         "I'll share a selection of personal projects here soon. In the meantime, visit my GitHub profile.",
