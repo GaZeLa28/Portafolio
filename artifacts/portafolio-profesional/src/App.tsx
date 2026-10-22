@@ -99,7 +99,7 @@ function Home() {
         <a href="#inicio" className="wordmark" aria-label={t.homeLink}><span className="wordmark-dot" />{profile.initials}<span className="wordmark-slash">/</span></a>
         <nav className={`main-nav ${menuOpen ? 'main-nav--open' : ''}`} aria-label={t.primaryNavigation}>
           {navItems.map(({ label, href }) => <a key={href} href={href} className="nav-link" onClick={() => setMenuOpen(false)}>{label}</a>)}
-          <ExternalLink href={profile.links.cv} className="cv-link" label={t.cvLinkLabel} pendingTitle={t.pendingLink} newTab testId="link-cv-header">{t.cv} <ArrowUpRight size={14} /></ExternalLink>
+          <ExternalLink href={`${import.meta.env.BASE_URL}${profile.links.cv[language].slice(1)}`} className="cv-link" label={t.cvLinkLabel} pendingTitle={t.pendingLink} newTab testId="link-cv-header">{t.cv} <ArrowUpRight size={14} /></ExternalLink>
         </nav>
         <div className="language-switch" role="group" aria-label={t.languageSelector}>
           <button type="button" lang="es" aria-label={t.switchToSpanish} aria-pressed={language === 'es'} onClick={() => setLanguage('es')}>ES</button>
@@ -211,7 +211,7 @@ function Home() {
         <div className="social-links">
           <ExternalLink href={profile.links.linkedin} className="social-link" label={t.contact.linkedinLabel} pendingTitle={t.pendingLink}>LinkedIn <ArrowUpRight size={14} /></ExternalLink>
           <ExternalLink href={profile.links.github} className="social-link" label={t.contact.githubLabel} pendingTitle={t.pendingLink}>GitHub <ArrowUpRight size={14} /></ExternalLink>
-          <ExternalLink href={profile.links.cv} className="social-link" label={t.cvLinkLabel} pendingTitle={t.pendingLink} newTab testId="link-cv-contact">{t.contact.cv} <ArrowUpRight size={14} /></ExternalLink>
+          <ExternalLink href={`${import.meta.env.BASE_URL}${profile.links.cv[language].slice(1)}`} className="social-link" label={t.cvLinkLabel} pendingTitle={t.pendingLink} newTab testId="link-cv-contact">{t.contact.cv} <ArrowUpRight size={14} /></ExternalLink>
         </div>
       </section>
       <footer className="site-footer"><a href="#inicio" className="footer-mark" aria-label={t.homeLink}>{profile.initials}<span>/</span></a><span>{profile.footerLine[language]}</span><a className="back-top" href="#inicio">{t.footer.backToTop} ↑</a><span className="footer-year">© {new Date().getFullYear()}</span></footer>

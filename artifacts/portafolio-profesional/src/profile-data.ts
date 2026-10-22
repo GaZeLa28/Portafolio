@@ -194,7 +194,7 @@ export const profile = {
   },
   links: {
     email: "pipe.guillen07@gmail.com",
-    cv: "/cv-felipe-guillen.pdf",
+    cv: localized("/cv-felipe-guillen-es.pdf", "/cv-felipe-guillen-en.pdf"),
     linkedin: "https://www.linkedin.com/in/felipe-guillén-5084162ba",
     github: "https://github.com/GaZeLa28",
   },
