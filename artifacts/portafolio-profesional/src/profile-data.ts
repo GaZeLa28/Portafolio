@@ -89,6 +89,54 @@ const projects: Project[] = [
       scope: localized("Estado observado durante la prueba, no métricas permanentes. Replicación y fundamentos de alta disponibilidad, sin failover ni recuperación automáticos ni garantías de disponibilidad o RTO/RPO.", "Status observed during testing, not ongoing metrics. Replication and high availability fundamentals, without automatic failover or recovery, availability guarantees, or RTO/RPO claims."),
     },
   },
+  {
+    number: "05",
+    type: localized("Infraestructura Cloud, Administración Linux y Monitoreo", "Cloud Infrastructure, Linux Administration & Monitoring"),
+    title: "Splunk Distributed Deployment & Linux Monitoring",
+    description: localized(
+      "Experiencia técnica profesional práctica en un laboratorio distribuido de Splunk Enterprise con tres máquinas virtuales Rocky Linux 9.8 en Google Cloud Compute Engine.\n\nSeparé los componentes Search Head, Indexer y Universal Forwarder para configurar búsquedas distribuidas, recepción de eventos, ingesta de registros Linux y monitoreo de rendimiento. Desarrollé un script Bash ejecutado mediante cron cada cinco minutos y un dashboard de CPU y memoria con Splunk Search Processing Language (SPL).",
+      "Practical professional technical experience in a distributed Splunk Enterprise laboratory using three Rocky Linux 9.8 virtual machines on Google Cloud Compute Engine.\n\nSeparated Search Head, Indexer, and Universal Forwarder components to configure distributed search, event reception, Linux log ingestion, and performance monitoring. Developed a Bash script scheduled with cron every five minutes and a CPU and memory dashboard using Splunk Search Processing Language (SPL).",
+    ),
+    tags: ["Splunk Enterprise", "Splunk Search Head", "Splunk Indexer", "Splunk Universal Forwarder", "Google Cloud Platform", "Google Compute Engine", "Rocky Linux 9.8", "Splunk Search Processing Language (SPL)", "Linux CLI", "Bash", "cron", "SSH", "TCP/IP", "RBAC", "Linux Journald"],
+    art: "project-art--two",
+    mark: "05",
+    details: {
+      objective: localized(
+        "Implementar y validar un laboratorio distribuido de Splunk para recopilar registros Linux, consultar eventos y visualizar métricas de CPU y memoria, documentando los problemas técnicos y las soluciones aplicadas.",
+        "Deploy and validate a distributed Splunk laboratory to collect Linux logs, query events, and visualize CPU and memory metrics, documenting technical issues and troubleshooting actions.",
+      ),
+      activities: [
+        localized("Despliegue de tres instancias Rocky Linux 9.8 en Google Cloud e instalación y configuración de Splunk: splunk-sh como Search Head, splunk-idx como Indexer y splunk-uf como Universal Forwarder.", "Deployed three Rocky Linux 9.8 instances on Google Cloud and installed and configured Splunk: splunk-sh as Search Head, splunk-idx as Indexer, and splunk-uf as Universal Forwarder."),
+        localized("Configuración de Universal Forwarder hacia Indexer por TCP 9997 y Search Head hacia Indexer por TCP 8089, con acceso administrativo a Splunk Web mediante un túnel SSH local.", "Configured Universal Forwarder to Indexer communication over TCP 9997 and Search Head to Indexer communication over TCP 8089, with administrative Splunk Web access through a local SSH tunnel."),
+        localized("Validación de un Search Peer activo y saludable y comprobación de eventos de los tres hosts en el índice _internal.", "Validated an active, healthy Search Peer and checked events from all three hosts in the _internal index."),
+        localized("Creación y autenticación de un usuario no administrador con rol Power User y comprobación de sus permisos para las tareas del laboratorio.", "Created and authenticated a non-administrator Power User account and checked its permissions for laboratory tasks."),
+        localized("Configuración de ingesta de mensajes Linux y registros de arranque en linux_os, con eventos linux_messages y linux_boot y revisión de fuentes de logs y Linux Journald.", "Configured Linux message and boot-log ingestion into linux_os, using linux_messages and linux_boot events and reviewing log sources and Linux Journald."),
+        localized("Automatización de métricas CPU/RAM con Bash y cron cada cinco minutos; indexación en linux_perf y consultas SPL para construir un dashboard con promedios en ventanas de cinco minutos.", "Automated CPU/RAM collection with Bash and cron every five minutes; indexed data in linux_perf and used SPL queries to build a dashboard with averages over five-minute windows."),
+        localized("Diagnóstico y documentación de problemas de SSH, configuración de servicios, permisos y fuentes de registros, junto con las soluciones aplicadas y evidencias de validación.", "Diagnosed and documented SSH, service configuration, permission, and log-source issues, along with troubleshooting actions and validation evidence."),
+      ],
+      result: localized(
+        "Tres máquinas virtuales funcionando con roles diferenciados y un Search Peer habilitado y saludable. Telemetría de los tres hosts visible mediante búsquedas, autenticación exitosa del usuario Power User e ingesta verificable de registros Linux. Métricas de CPU y RAM indexadas y dashboard consultable desde Splunk Web. Los cinco objetivos observables del laboratorio quedaron documentados mediante evidencias.",
+        "Three working virtual machines with distinct roles and an enabled, healthy Search Peer. Telemetry from all three hosts visible through searches, successful Power User authentication, and verifiable Linux log ingestion. CPU and RAM metrics indexed and a dashboard accessible through Splunk Web. The laboratory's five observable objectives were documented with evidence.",
+      ),
+      skills: [
+        localized("Administración de Splunk", "Splunk Administration"),
+        localized("Monitoreo de infraestructura", "Infrastructure Monitoring"),
+        localized("Administración de sistemas Linux", "Linux System Administration"),
+        localized("Ingesta y análisis de logs", "Log Ingestion and Analysis"),
+        localized("Consultas mediante SPL", "Search Processing Language (SPL)"),
+        localized("Infraestructura en Google Cloud", "Google Cloud Infrastructure"),
+        localized("Administración de permisos RBAC", "Role-Based Access Control (RBAC)"),
+        localized("Automatización mediante Bash", "Bash Scripting and Automation"),
+        localized("Diagnóstico de servicios distribuidos", "Distributed Systems Troubleshooting"),
+        localized("Resolución de incidentes técnicos", "Technical Issue Resolution"),
+        localized("Documentación técnica", "Technical Documentation"),
+      ],
+      scope: localized(
+        "Experiencia técnica profesional práctica desarrollada en un laboratorio. Los resultados corresponden a las comprobaciones realizadas, sin implicar infraestructura de producción, alta disponibilidad, integración con un SOC, capacidades SIEM avanzadas ni monitoreo continuo 24/7. La validación del usuario Power User se limita a las tareas comprobadas y no constituye una auditoría exhaustiva de RBAC.",
+        "Practical professional technical experience developed in a laboratory. Results reflect the checks performed, without implying production infrastructure, high availability, SOC integration, advanced SIEM capabilities, or continuous 24/7 monitoring. Power User validation is limited to the tasks checked and does not constitute a comprehensive RBAC audit.",
+      ),
+    },
+  },
 ];
 
 export const profile = {
